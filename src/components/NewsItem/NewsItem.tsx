@@ -3,7 +3,11 @@ import React from 'react';
 import styles from './styles.module.scss';
 import { formatTimeAgo } from '../../helpers/formatTimeAgo';
 
-const NewsItem: React.FC = ({ item }) => {
+type NewsItem = {
+  item: any;
+};
+
+const NewsItem: React.FC<NewsItem> = ({ item }) => {
   return (
     <li className={styles.item}>
       <div className={styles.item__wrapper} style={{ backgroundImage: `url(${item.image})` }}></div>
