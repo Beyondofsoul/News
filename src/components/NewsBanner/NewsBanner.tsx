@@ -7,8 +7,6 @@ import { formatTimeAgo } from '../../helpers/formatTimeAgo';
 type NewsItem = {
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   item: any;
-  title: string;
-  published: number;
 };
 
 const NewsBanner: React.FC<NewsItem> = ({ item }) => {
