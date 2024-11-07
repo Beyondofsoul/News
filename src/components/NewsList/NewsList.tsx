@@ -2,6 +2,7 @@
 import React from 'react';
 import styles from './styles.module.scss';
 import NewsItem from '../NewsItem/NewsItem';
+import withSkeleton from '../../helpers/hocs/withSkeleton';
 
 type NewsListItem = {
   news: any;
@@ -17,4 +18,6 @@ const NewsList: React.FC<NewsListItem> = ({ news }) => {
   );
 };
 
-export default NewsList;
+const NewsListWithSkeleton = withSkeleton(NewsList, 'item', 10);
+
+export default NewsListWithSkeleton;
