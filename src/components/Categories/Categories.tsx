@@ -15,6 +15,12 @@ const Categories: React.FC<categoryParams> = ({
 }) => {
   return (
     <div className={styles.categories}>
+      <button
+        className={selectedCategory ? styles.categories__active : styles.categories__item}
+        onClick={() => setSelectedCategory(null)}
+      >
+        All
+      </button>
       {categories.map((category: any) => {
         return (
           <button
