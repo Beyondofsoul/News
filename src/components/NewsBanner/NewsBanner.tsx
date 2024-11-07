@@ -3,6 +3,7 @@ import styles from './styles.module.scss';
 
 import Image from '../Image.tsx/Image';
 import { formatTimeAgo } from '../../helpers/formatTimeAgo';
+import withSkeleton from '../../helpers/hocs/withSkeleton';
 
 type NewsItem = {
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
@@ -21,4 +22,6 @@ const NewsBanner: React.FC<NewsItem> = ({ item }) => {
   );
 };
 
-export default NewsBanner;
+const NewsBannerWithSkeleton = withSkeleton(NewsBanner, 'banner', 1);
+
+export default NewsBannerWithSkeleton;
